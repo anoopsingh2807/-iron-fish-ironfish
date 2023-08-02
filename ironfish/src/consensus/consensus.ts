@@ -33,6 +33,12 @@ export type ConsensusParameters = {
    * The minimum fee that a transaction must have to be accepted
    */
   minFee: number
+
+  /**
+   * Before upgrade we have block timestamp smaller than previous block. After this
+   * block we enforce the block timestamps in the sequential order as the block sequences.
+   */
+  enforceSequentialBlockTime: number
 }
 
 export class Consensus {
